@@ -4,6 +4,29 @@
   
   
   <entry>
+    <title>lightsout game and its solution</title>
+    <link href="/2022/03/03/lightsout-game/"/>
+    <url>/2022/03/03/lightsout-game/</url>
+    
+    <content type="html"><![CDATA[<h3 id="游戏描述"><a href="#游戏描述" class="headerlink" title="游戏描述"></a>游戏描述</h3><hr><p>这是本人在上高等线性代数课程时，邵老师提到的一个有趣的例子。以前邵老师的个人网页上有这个游戏，但是现在他的个人网页已经过期了，无法再在上面玩了，我自己使用 html + javascript 写了一个简陋的<a href="https://chx7514.github.io/html/lightsout.html">关灯游戏 </a></p><p><img src="C:\Users\96126\AppData\Roaming\Typora\typora-user-images\image-20220303190916422.png" alt="image-20220303190916422"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>game</tag>
+      
+      <tag>linear algebra</tag>
+      
+      <tag>matlab</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>博客配置指南</title>
     <link href="/2022/03/03/%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/"/>
     <url>/2022/03/03/%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</url>

@@ -1,0 +1,538 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="José Chen">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="记录此博客建站过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客配置指南">
+<meta property="og:url" content="https://chx7514.github.io/2022/03/03/%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="Dada&#39;s Page">
+<meta property="og:description" content="记录此博客建站过程">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-03T05:31:44.016Z">
+<meta property="article:author" content="José Chen">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Fluid">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>博客配置指南 - Dada&#39;s Page</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"chx7514.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Dada</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="博客配置指南">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-03 00:00" pubdate>
+        March 3, 2022 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.3k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">博客配置指南</h1>
+            
+            <div class="markdown-body">
+              <p>本博客基于 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> 建站，使用 <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/">Fluid</a> 主题美化，并使用 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>进行部署。</p>
+<p>以下参考tequila-sunrise的博客 <a target="_blank" rel="noopener" href="https://tequila-sunrise.github.io/2021/10/31/hello-world/">How to Create This Blog</a> 并结合本人建站过程分享建站经验。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><hr>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Node.js</a> Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git</a></p>
+</li>
+</ul>
+<p>安装 Hexo</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs sh">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><hr>
+<h4 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h4><p>在项目目录下新建博客项目，其中项目名称用 <code>&lt;blog&gt;</code> 指代</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo init &lt;blog&gt;<br><span class="hljs-built_in">cd</span> &lt;blog&gt;<br>npm install<br></code></pre></td></tr></table></figure>
+
+<h4 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h4><p>项目配置文件为 <code>_config.yml</code>，参数说明见官方文档 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration.html">cn</a> / <a target="_blank" rel="noopener" href="https://hexo.io/docs/configuration">en</a></p>
+<p>以下是建议修改的参数，其中 <code>&lt;username&gt;</code> 为你的 GitHub 用户名</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Site</span><br><span class="hljs-attr">title:</span>       <span class="hljs-comment"># 网站标题</span><br><span class="hljs-attr">author:</span>      <span class="hljs-comment"># 作者</span><br><span class="hljs-attr">language:</span>    <span class="hljs-comment"># 网站语言设置，改变主题生成语言，默认en，简中zh-CN，本站采用en</span><br><span class="hljs-attr">timezone:</span>    <span class="hljs-comment"># 网站时区，例如America/New_York和UTC，大陆地区可选择Asia/Shanghai</span><br><br><span class="hljs-comment"># URL</span><br><span class="hljs-attr">url:</span>         <span class="hljs-comment"># 网址，本站采用GitHub Page进行部署，故填入https://&lt;username&gt;.github.io/</span><br><br><span class="hljs-comment"># Extensions</span><br><span class="hljs-attr">theme:</span>       <span class="hljs-comment"># 主题，填入fluid，后续会安装该主题</span><br><br><span class="hljs-comment"># Deployment</span><br><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <br>    <span class="hljs-attr">github:</span> <span class="hljs-string">https://github.com/&lt;username&gt;/&lt;username&gt;.github.io</span>  <span class="hljs-comment"># 后续会在GitHub上建立此项目</span><br></code></pre></td></tr></table></figure>
+
+<p>至此建站初步完成，接下来配置美化主题，我选用 <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/">Fluid</a> 主题</p>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><hr>
+<p>由于存在更新迭代的情况，本教程可能过时，推荐阅读官方开始教程 <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/">cn</a> / <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/en/">en</a></p>
+<h4 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h4><p>官方推荐两种安装方式，一为通过 npm 直接安装，二为下载最新 release 版本解压到 themes 目录；本文采取后者</p>
+<p>首先移步 GitHub 下载 <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/releases">最新 release 版本</a></p>
+<p>解压至 themes 目录，并将解压出的文件夹重命名为 <code>fluid</code></p>
+<h4 id="创建-About-页"><a href="#创建-About-页" class="headerlink" title="创建 About 页"></a>创建 About 页</h4><p>首次使用本主题，about 页需手动创建，在 <code>&lt;blog&gt;</code> 根目录下终端输入</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo new page about<br></code></pre></td></tr></table></figure>
+
+<p>其中 <code>new</code> 表示新建，<code>page</code> 表示页，<code>about</code> 为 source 目录下新建文件夹的名字</p>
+<p>修改 <code>/source/about/index.md</code> ，添加 <code>layout</code> 属性，解析时会按照 about 页的标准进行解析</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: about<br>date: &lt;自动生成&gt;<br><span class="hljs-section">layout: about</span><br><span class="hljs-section">---</span><br><br>&lt;此处写 about 页的正文，支持 Markdown, HTML&gt;<br></code></pre></td></tr></table></figure>
+
+<h4 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h4><p>更新主题前置准备，在博客目录下创建 <code>_config.fluid.yml</code> 文件，将主题的 <code>_config.yml</code> 内容复制迁移，以后如果修改任何主题配置，都只需修改 <code>_config.fluid.yml</code> 的配置即可，注意：</p>
+<ul>
+<li>只要存在于 <code>_config.fluid.yml</code> 的配置都是高优先级，修改原 <code>_config.yml</code> 是无效的</li>
+<li>每次更新主题可能存在配置变更，请注意更新说明，可能需要手动对 <code>_config.fluid.yml</code> 同步修改</li>
+<li>想查看覆盖配置有没有生效，可以通过 <code>hexo g --debug</code> 查看命令行输出</li>
+<li>如果想将某些配置覆盖为空，注意不要把主键删掉，不然是无法覆盖的，比如：</li>
+</ul>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs clean">about:<br>  icons:  # 不要把 icons 注释掉，否则无法覆盖配置<br>    # - &#123; <span class="hljs-keyword">class</span>: <span class="hljs-string">&#x27;iconfont icon-github-fill&#x27;</span>, link: <span class="hljs-string">&#x27;https://github.com&#x27;</span> &#125;<br>    # - &#123; <span class="hljs-keyword">class</span>: <span class="hljs-string">&#x27;iconfont icon-wechat-fill&#x27;</span>, qrcode: <span class="hljs-string">&#x27;/img/favicon.png&#x27;</span> &#125;<br>Copy<br></code></pre></td></tr></table></figure>
+
+<p>下面是更新流程：</p>
+<ol>
+<li>将 theme 目录下的 fluid 文件夹全部删除，重新下载 <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid/releases">release</a> 并依照之前步骤解压</li>
+<li>如果某些配置发生了变化（改名或弃用），release 的说明里会特别提示，同步修改原配置文件即可</li>
+</ol>
+<h4 id="自定义配置"><a href="#自定义配置" class="headerlink" title="自定义配置"></a>自定义配置</h4><p>具体参照 <code>_config.fluid.yml</code> 内注释进行，参数展开解释见官方配置指南 <a target="_blank" rel="noopener" href="https://fluid-dev.github.io/hexo-fluid-docs/guide/">cn</a> / <a target="_blank" rel="noopener" href="https://fluid-dev.github.io/hexo-fluid-docs/en/guide/">en</a></p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><hr>
+<p>采用 GitHub Page 的方式进行部署</p>
+<h4 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h4><p>在 GitHub 新建 repo，命名<strong>必须</strong>为 <code>&lt;username&gt;</code>.github.io，<strong>不需要</strong>初始化任何文件，如 README LICENCE 等</p>
+<h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p>在 <code>&lt;blog&gt;</code> 根目录下终端输入</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
+
+<p>而后执行以下命令，第一行会清除之前解析编译生成的文件，第二行 g 为 generate 缩写，d 为 deploy 缩写，表示编译生成文件后立即部署网站，关于 Hexo 所有的指令说明，详见官方文档 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">cn</a> / <a target="_blank" rel="noopener" href="https://hexo.io/docs/commands">en</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo clean<br>hexo g -d<br></code></pre></td></tr></table></figure>
+
+<p>每次更新博客配置或内容后，都进行如上操作进行部署</p>
+<p>本地可以预览部署效果，终端输入以下指令，s 为 server 缩写</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo clean<br>hexo g<br>hexo s<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><hr>
+<p>终端输入</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo new draft &lt;title&gt;<br></code></pre></td></tr></table></figure>
+
+<p>新建草稿，随后在 source/_drafts 中找到 <code>&lt;title&gt;.md</code> ，创作完毕后发布草稿</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo publish post &lt;title&gt;<br></code></pre></td></tr></table></figure>
+
+<p>其他指令请移步官方文档 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/writing">cn</a> / <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing">en</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Hexo/">Hexo</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Fluid/">Fluid</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://chx7514.github.io/img/lightsout.png">
 <meta property="og:image" content="https://chx7514.github.io/gif/lightsout_solution.gif">
 <meta property="article:published_time" content="2022-03-03T11:14:26.000Z">
-<meta property="article:modified_time" content="2022-03-07T08:59:49.212Z">
+<meta property="article:modified_time" content="2022-03-07T10:10:43.845Z">
 <meta property="article:author" content="José Chen">
 <meta property="article:tag" content="game">
 <meta property="article:tag" content="linear algebra">
@@ -76,7 +76,11 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 6.0.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head>
 
 
 <body>
@@ -202,7 +206,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      205 字
+      548 字
     </span>
   
 
@@ -211,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      2 分钟
     </span>
   
 
@@ -251,12 +255,33 @@
             <h1 style="display: none">lightsout game and its solution</h1>
             
             <div class="markdown-body">
-              <h3 id="游戏描述"><a href="#游戏描述" class="headerlink" title="游戏描述"></a>游戏描述</h3><hr>
-<p><code>Lightsout</code> 游戏是本人在上高等线性代数课程时，邵老师提到的一个有趣的例子。以前邵老师的个人网页上有这个游戏，但是现在他的个人网页已经过期了，无法再在上面玩了，我自己使用 html + javascript 写了一个极其简陋的<a href="https://chx7514.github.io/html/lightsout.html">关灯游戏 </a></p>
-<p><img src="/img/lightsout.png" srcset="/img/loading.gif" lazyload></p>
+              <h3 id="游戏描述"><a class="markdownIt-Anchor" href="#游戏描述"></a> 游戏描述</h3>
+<hr />
+<p><code>Lightsout</code> 游戏是本人在上高等线性代数课程时，邵老师提到的一个有趣的例子。以前邵老师的个人网页上有这个游戏，但是可惜现在他的个人网页已经过期了，无法再在上面玩了，我自己使用 html + javascript 写了一个极其简陋的<a href="https://chx7514.github.io/html/lightsout.html">关灯游戏 </a></p>
+<p><img src="/img/lightsout.png" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p>游戏的规则非常简单：点击一盏灯，它自己以及与它相邻的灯都会改变状态，即亮的变为暗的，暗的变为亮的，当所有灯都被点亮时，游戏胜利</p>
-<p>以下为 $5 \times 5$ 地图的解法（不唯一）</p>
-<p><img src="/gif/lightsout_solution.gif" srcset="/img/loading.gif" lazyload></p>
+<p>以下为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn><mo>×</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">5 \times 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 地图的解法（不唯一）</p>
+<p><img src="/gif/lightsout_solution.gif" srcset="/img/loading.gif" lazyload alt="" /></p>
+<h3 id="建模"><a class="markdownIt-Anchor" href="#建模"></a> 建模</h3>
+<hr />
+<p>这个游戏可以用数学语言描述。我们很容易知道这个游戏的几个简单性质</p>
+<ul>
+<li>点灯的顺序对结果是没有影响的，我们只关心点了哪些灯</li>
+<li>对一盏灯点击偶数次相当于没有操作，点击奇数次相当于点了一次</li>
+<li>当一盏灯和它相邻的点被点击的次数之和为奇数时，它就被点亮；否则，依然是暗的</li>
+</ul>
+<p>于是，我们可以用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo separator="true">,</mo><mtext> </mtext><mn>0</mn></mrow><annotation encoding="application/x-tex">1,\ 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace"> </span><span class="mord">0</span></span></span></span> 来表示某盏灯 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">x_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 是否被点击（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 表示被点击, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 表示没有点击），我们的目标是让每一盏灯及它周围的灯被点击次数之和均为奇数。假设我们在玩 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2\times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 的地图，则问题可表示为</p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: align at position 13: \left.\begin{̲a̲l̲i̲g̲n̲}̲
+x_1+x_2+x_3\\
+…'>\left.\begin{align}
+x_1+x_2+x_3\\
+x_1+x_2+x_4\\
+x_1+x_3+x_4\\
+x_2+x_3+x_4
+\end{align}
+\right\}
+is\ odd
+</p>
 
             </div>
             <hr>

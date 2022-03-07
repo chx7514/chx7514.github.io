@@ -18,10 +18,10 @@ font-size: 1px;
 </style>
 </head>
 <body>
-Length:<br>
-<input type="number" name="length" id="length" value=5><br>
+height:<br>
+<input type="number" name="height" id="height" value=5><br>
 Width:<br>
-<input type="number" name="length" id="width" value=5><br>
+<input type="number" name="width" id="width" value=5><br>
 <input type="button" name="aaaa" id="aaaa" value="restart" />
 <div id="wrap">
 </div>
@@ -29,13 +29,13 @@ Width:<br>
 <script type="text/javascript">
 //获取wrap div
 var wrap = document.getElementById('wrap');
-var length = 5;
+var height = 5;
 var width = 5;
 var lights = [];
 function generate() {
     //定义空数组，保存所有light
     lights = [];
-    for(var i = 0; i < length; i++) {
+    for(var i = 0; i < height; i++) {
         for(var j = 0; j < width; j++) {
             var aLight = document.createElement('div');
             //设置aLight的样式
@@ -50,7 +50,7 @@ function generate() {
             aLight.i = i;
             aLight.j = j;
             aLight.width = width;
-            aLight.length = length;
+            aLight.height = height;
             aLight.onclick = function() {
                 //首先改变当前点击的颜色
                 //event.target 是指当前正在接受事件的对象，如果是点击div，则就是被点击的div本身
@@ -64,7 +64,7 @@ function generate() {
                         (topLight.style.backgroundColor == 'black') ? 'yellow' : 'black';
                 }
                 //获取下边的灯
-                if(currentLight.i <= currentLight.width - 2) {
+                if(currentLight.i <= currentLight.height - 2) {
                     var bottomLight = lights[currentLight.index + currentLight.width];
                     bottomLight.style.backgroundColor =
                         (bottomLight.style.backgroundColor == 'black') ? 'yellow' : 'black';
@@ -90,12 +90,12 @@ function generate() {
 generate();
 var aaaa = document.getElementById('aaaa');
 aaaa.onclick = function() {
-<!--    for(var i = 0; i < length * width; i++) {-->
+<!--    for(var i = 0; i < height * width; i++) {-->
 <!--        if (lights[i].style.backgroundColor == 'yellow') {-->
 <!--            lights[i].style.backgroundColor = 'black';-->
 <!--        }-->
 <!--    }-->
-    length = parseInt(document.getElementById('length').value);
+    height = parseInt(document.getElementById('height').value);
     width = parseInt(document.getElementById('width').value);
     wrap.innerHTML='';
     generate();

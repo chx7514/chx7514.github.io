@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="Dada&#39;s Page">
 <meta property="og:description" content="本文关注函数插值的基本知识，包括多项式插值的 Lagrange, Neville, Newton 方法，误差估计，Runge现象，Chebyshev节点，Hermite 插值，三次样条插值，一般基函数的插值，二维插值">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://chx7514.github.io/2022/03/09/img/Delaunay_triangulation.png">
+<meta property="og:image" content="https://chx7514.github.io/img/Delaunay_triangulation.png">
 <meta property="article:published_time" content="2022-03-09T05:19:23.000Z">
-<meta property="article:modified_time" content="2023-03-22T13:47:27.077Z">
+<meta property="article:modified_time" content="2023-08-09T13:35:14.867Z">
 <meta property="article:author" content="José Chen">
 <meta property="article:tag" content="数值算法">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://chx7514.github.io/2022/03/09/img/Delaunay_triangulation.png">
+<meta name="twitter:image" content="https://chx7514.github.io/img/Delaunay_triangulation.png">
   
   
   <title>函数插值 - Dada&#39;s Page</title>
@@ -547,7 +547,7 @@ y_1\\y_2\\ \vdots \\y_n
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>ω</mi><mi>i</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\omega_i(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span> 与距离有关，并且距离越小，权重越大</p>
 <h4 id="delaunay-triangulation-dual-of-voronoi-diagram"><a class="markdownIt-Anchor" href="#delaunay-triangulation-dual-of-voronoi-diagram"></a> Delaunay triangulation – dual of Voronoi diagram</h4>
 <p>Delaunay triangulation 和 Voronoi diagram 的示例如下</p>
-<p><img src="./../img/Delaunay_triangulation.png" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p><img src="/img/Delaunay_triangulation.png" srcset="/img/loading.gif" lazyload alt="" /></p>
 <p>其中黑色点为给定的插值点，蓝色线为Delaunay triangulation，红色为Voronoi diagram，两个互为对偶关系。每一块红色区域内的点都与区域内的插值点最近。通过 Delaunay triangulation 得到的插值方法就是根据估计点最近的三个插值点，即 Delaunay triangulation 的顶点来进行线性插值。具体如下：</p>
 <p>假设三个插值点分别为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A,B,C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>，则</p>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>α</mi><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>A</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>A</mi></msub><mo stretchy="false">)</mo><mo>+</mo><mi>β</mi><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>B</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>B</mi></msub><mo stretchy="false">)</mo><mo>+</mo><mi>γ</mi><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>C</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>C</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s(x,y)=\alpha f(x_A,y_A)+\beta f(x_B,y_B)+\gamma f(x_C,y_C)

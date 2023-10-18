@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://chx7514.github.io/img/FM.png">
 <meta property="og:image" content="https://chx7514.github.io/img/BJKST.png">
 <meta property="article:published_time" content="2023-10-06T13:23:40.000Z">
-<meta property="article:modified_time" content="2023-10-18T13:51:03.103Z">
+<meta property="article:modified_time" content="2023-10-18T15:22:43.617Z">
 <meta property="article:author" content="José Chen">
 <meta property="article:tag" content="algorithm">
 <meta name="twitter:card" content="summary_large_image">
@@ -208,7 +208,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.4k 字
+      3.5k 字
     </span>
   
 
@@ -326,6 +326,10 @@ p(y)=z(1-y)^{z-1}\\
 <p><img src="/img/BJKST.png" srcset="/img/loading.gif" lazyload alt="" /></p>
 <h4 id="元素频率估计"><a class="markdownIt-Anchor" href="#元素频率估计"></a> 元素频率估计</h4>
 <hr />
+<h5 id="问题描述-3"><a class="markdownIt-Anchor" href="#问题描述-3"></a> 问题描述</h5>
+<p>依然是给定一串数，估计某个数出现的频率 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>x</mi></msub><mo>=</mo><mi mathvariant="normal">∣</mi><mrow><mi>i</mi><mo>:</mo><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><mi>x</mi></mrow><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">f_x=|{i:x_i=x}|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord"><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">x</span></span><span class="mord">∣</span></span></span></span></p>
+<p>跟前面的思路一样，利用多个 hash function 得到的值来进行存储</p>
+<p>![](/img/count-min sketch.png)</p>
 
             </div>
             <hr>
